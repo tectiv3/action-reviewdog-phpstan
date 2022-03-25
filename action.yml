@@ -10,10 +10,6 @@ inputs:
     description: 'Report level for reviewdog [info,warning,error].'
     default: 'warning'
 
-  phpstan_level:
-    description: 'Report level for phpstan.'
-    default: '4'
-
   reporter:
     description: 'Reporter of reviewdog command [github-pr-check,github-pr-review].'
     default: 'github-pr-check'
@@ -40,7 +36,6 @@ runs:
     - ${{ inputs.target_directory }}
     - ${{ inputs.args }}
     - ${{ inputs.fail_on_error }}
-    - ${{ inputs.phpstan_level }}
 
 branding:
   icon: 'check-circle'
